@@ -1,0 +1,22 @@
+Java Lab Questions
+Andrew Beck
+
+1.  My LastPlayBot leverages the fact that each player plays a move and the comparison is handled by essentially a third party, the Main class. For the first round with no prior moves played, LastPlayBot always plays the same move no matter what, from then on the main method passes the opponents move in to the LastPlayBot as an argument to its play function. LastPlayBot then takes this argument and returns it as its move for the next round.
+
+2.  MyBot uses the same basic principle as LastPlayBot. If a MyBot is involved in a game, the main method will always force the other player to play first, and then give MyBot that players move as an arguument to its play function. MyBot, using a switch statement, then plays one of the two moves that will always beat the given move. For this reason, MyBot is unbeatable by any player other than itself, in which case the game will always result in a tie. MyBot is unbeatable because it cheats, but it is still unbeatable.
+
+3.  Java uses a combination of primitive and constructed types. Ints, doubles, chars, and bytes are all examples of primitive types. Arrays and classes are examples of constructed reference types which contain references to objects. Java is a strongly typed language because it catches all type errors at compile time. It is also statically typed because every variable needs to have an explicit associated type declared before runtime. This information was taken from the course slides, the PDF found here: http://www.ccs.neu.edu/home/riccardo/courses/csu370-fa07/lect4.pdf and prior knowledge of the Java language.
+
+4.  I am noticing that when RandomBot and StupidBot play, StupidBot seems to win more often. As a Human, I can always beat StupidBot, IterativeBot, and LastPlayBot. RandomBot is inherently random and unpredictable so victories are not guaranteed. MyBot is unbeatable.
+
+5.  Rock-paper-scissors-lizard-Spock is a symmetric normal form game, where each possible strategy has the same possible outcomes regardless of who plays it. If played correctly it is also impossible to know the other players move beforehand. Therefore, since no one move has a better average outcome than any other, it is impossible to derive a strategy which is more likely to succeed. This is further illustrated by the fact that the only way I could make MyBot unbeatable was to give it prior knowledge of the other players move, which is by definition of the game rules, cheating.
+
+6.  Java is very powerful and very portable. OO programming is easier for me to understand so I inherently like these types of languages more.
+
+7.  The documentation is extensive and sometimes hard to read or understand.
+
+8.  I did enjoy this lab. I was a good exploration of OO concepts like inheritance. It was fairly straightforward and accessible.
+
+9.  Approximately 6 hours
+
+10. I had three semesters of CSCI Java courses prior to this course but the last one I took was two years ago.
