@@ -6,7 +6,7 @@
 package main.java.csci305.javalab;
 
 /**
- *
+ * Class to represent MyBot. MyBot cheats, and is therefore unbeatable.
  * @author Drew
  */
 public class MyBot extends Player {
@@ -15,11 +15,11 @@ public class MyBot extends Player {
     }
 
     @Override
-    public Element play(Element el) {
-      if(el == null) {
+    public Element play(Element el) {   // MyBot does use the argument to play()
+      if(el == null) {    // if el is null return Spock i.e. the first round
         return Main.moves.get("Spock");
       }
-        switch(el.getName()) {
+        switch(el.getName()) {    // based on the input, play the counter move. From Main, the input will always be the other players move.
           case "Rock": return Main.moves.get("Paper");
           case "Paper": return Main.moves.get("Scissors");
           case "Scissors": return Main.moves.get("Rock");

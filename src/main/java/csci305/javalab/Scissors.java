@@ -6,16 +6,16 @@
 package main.java.csci305.javalab;
 
 /**
- *
+ * Class to represent the move Scissors
  * @author Drew
  */
 public class Scissors extends Element{
     public Scissors(String name) {
         super(name);
     }
-    
+
     @Override
-    public Outcome compareTo(Element e) {
+    public Outcome compareTo(Element e) {   // given an input element, determine the outcome of the game. This is unique for the Scissors class.
         switch (e.getName()) {
             case "Rock": return new Outcome("Rock crushes Scissors", "Lose");
             case "Paper": return new Outcome("Scissors cuts Paper", "Win");

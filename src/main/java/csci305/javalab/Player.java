@@ -6,7 +6,7 @@
 package main.java.csci305.javalab;
 
 /**
- *
+ * Class to represent the generic Player all other player inherit from
  * @author Drew
  */
 abstract public class Player {
@@ -16,9 +16,11 @@ abstract public class Player {
         this.name = name;
     }
 
+    // returns the name of the current player
     public String getName() {
         return name;
     }
 
+    // abstract play method to determine the play strategy for each player
     abstract public Element play(Element e);
 }

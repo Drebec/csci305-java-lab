@@ -8,16 +8,17 @@ package main.java.csci305.javalab;
 import java.util.Scanner;
 
 /**
- *
+ * Class to represent a human player
  * @author drewb
  */
 public class Human extends Player{
     Scanner in = new Scanner(System.in);
-    
+
     public Human(String name) {
         super(name);
     }
-    
+
+    // prints the 5 possible moves menu
     private void printMenu() {
         System.out.println("(1) : Rock");
         System.out.println("(2) : Paper");
@@ -25,31 +26,32 @@ public class Human extends Player{
         System.out.println("(4) : Lizard");
         System.out.println("(5) : Spock");
     }
-    
+
+    // the human play is going to get user input with error checking and play the users selection
     @Override
-    public Element play(Element el) {
-        int input = -1;
-        printMenu();
+    public Element play(Element el) {   // the human class makes no use of the argument to the play function
+        int input = -1;   //start user input as invalid
+        printMenu();    //print the moves menu
         while(true) {
             System.out.println("Enter your move: ");
-            try {
-                input = in.nextInt();
-                if(input > 0 && input < 6) {
+            try {   // try catch protects against invalid type inputs i.e. string instead of int
+                input = in.nextInt();   //get user input
+                if(input > 0 && input < 6) {    //check for input out of bounds
                     break;
                 }
             } catch (java.util.InputMismatchException e){
-                in.next();
+                in.next();    // clear the buffer to prevent infinite improper inputs if the initial input was a string
             };
-            System.out.println("Invalid move.Please try again.");
+            System.out.println("Invalid move.Please try again.");   // print invalid message
         }
-        
-        switch(input) {
+
+        switch(input) {   // return the move based on user selection
             case 1: return Main.moves.get("Rock");
             case 2: return Main.moves.get("Paper");
             case 3: return Main.moves.get("Scissors");
             case 4: return Main.moves.get("Lizard");
             case 5: return Main.moves.get("Spock");
             default: return null;
-        }        
+        }
     }
 }

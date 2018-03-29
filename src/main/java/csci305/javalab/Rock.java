@@ -6,16 +6,16 @@
 package main.java.csci305.javalab;
 
 /**
- *
+ * Class to represent the move Rock
  * @author Drew
  */
 public class Rock extends Element{
     public Rock(String name) {
         super(name);
     }
-    
+
     @Override
-    public Outcome compareTo(Element e) {
+    public Outcome compareTo(Element e) {   // given an input element, determine the outcome of the game. This is unique for the Rock class.
         switch (e.getName()) {
             case "Rock": return new Outcome("Rock equals Rock", "Tie");
             case "Paper": return new Outcome("Paper covers Rock", "Lose");

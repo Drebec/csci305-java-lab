@@ -6,7 +6,7 @@
 package main.java.csci305.javalab;
 
 /**
- *
+ * Class to represent the Lizard move
  * @author Drew
  */
 
@@ -14,9 +14,9 @@ public class Lizard extends Element {
     public Lizard(String name) {
         super(name);
     }
-    
+
     @Override
-    public Outcome compareTo(Element e) {
+    public Outcome compareTo(Element e) {   // given an input element, determine the outcome of the game. This is unique for the Lizard class.
         switch (e.getName()) {
             case "Rock": return new Outcome("Rock crushes Lizard", "Lose");
             case "Paper": return new Outcome("Lizard eats Paper", "Win");

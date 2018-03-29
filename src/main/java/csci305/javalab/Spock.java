@@ -6,16 +6,16 @@
 package main.java.csci305.javalab;
 
 /**
- *
+ * Class to represent the move Spock
  * @author Drew
  */
 public class Spock extends Element{
     public Spock(String name) {
         super(name);
     }
-    
+
     @Override
-    public Outcome compareTo(Element e) {
+    public Outcome compareTo(Element e) {   // given an input element, determine the outcome of the game. This is unique for the Spock class.
         switch (e.getName()) {
             case "Rock": return new Outcome("Spock vaporizes Rock", "Win");
             case "Paper": return new Outcome("Paper disproves Spock", "Lose");
