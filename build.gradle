@@ -28,6 +28,10 @@ repositories {
     jcenter()
 }
 
+run {
+standardInput = System.in
+}
+
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:22.0'
@@ -41,4 +45,4 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'main.java.csci305.javalab.Main'
